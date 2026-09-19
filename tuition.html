@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tuition &amp; Plans — SpaceEdu</title>
+<link rel="icon" type="image/png" href="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202005_3346cc4d-ec3b-44ab-825c-b18e49f5021a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Hanken+Grotesk:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero{padding:120px 0 60px;text-align:center;background:radial-gradient(ellipse at top,rgba(121,220,232,.08),transparent 60%)}
+.toggle-row{display:inline-flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--card-border);
+  border-radius:30px;padding:6px;margin-top:32px}
+.toggle-row button{border:0;background:none;color:var(--ink-dim);font-family:var(--font-body);font-weight:600;
+  font-size:15px;padding:10px 22px;border-radius:24px;cursor:pointer;transition:all .25s}
+.toggle-row button.active{background:linear-gradient(180deg,#fff,#d9ecfe);color:var(--btn-ink)}
+.save-badge{font-size:12px;color:var(--cyan);font-weight:700;margin-left:6px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
+.plan{position:relative;background:var(--card);border:1px solid var(--card-border);border-radius:22px;padding:36px 30px;
+  transition:transform .3s cubic-bezier(.22,1,.36,1),border-color .3s}
+.plan.featured{border-color:var(--cyan);background:rgba(121,220,232,.06)}
+.plan:hover{transform:translateY(-8px)}
+.plan .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--cyan);color:var(--btn-ink);
+  font-size:12px;font-weight:700;padding:6px 16px;border-radius:14px;letter-spacing:.5px}
+.plan h3{font-family:var(--font-serif);font-size:24px;font-weight:400;margin-bottom:6px}
+.plan .price{font-family:var(--font-serif);font-size:44px;margin:18px 0 4px}
+.plan .price span{font-size:15px;font-family:var(--font-body);color:var(--ink-dim)}
+.plan ul{list-style:none;margin:24px 0 30px;color:var(--ink-dim);font-size:15px}
+.plan li{padding:8px 0;border-top:1px solid var(--card-border);display:flex;gap:10px;align-items:center}
+.plan li::before{content:"✓";color:var(--cyan);font-weight:700}
+.plan .btn-pill,.plan .btn-ghost{width:100%}
+.faq{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--rule);padding:22px 0}
+.faq-item summary{cursor:pointer;font-size:17px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:22px;color:var(--cyan);transition:transform .25s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{color:var(--ink-dim);margin-top:14px;line-height:1.6;font-size:15px}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navrow" id="navrow">
+    <a class="logo" href="index.html">space<i>edu</i></a>
+    <nav class="links" id="site-nav">
+      <a href="index.html">Planets</a>
+      <a href="tuition.html" aria-current="page">Tution</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="blog.html">Blog</a>
+      <a class="enroll" href="#plans">Enroll</a>
+    </nav>
+    <button class="burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow center">Tuition</div>
+    <h1 class="h-serif center" style="max-width:700px">Pick the plan that fits how you learn.</h1>
+    <p class="lede center" style="margin-top:8px">Every plan includes full access to Earth, Venus and Mars courses. Cancel anytime.</p>
+    <div class="toggle-row" role="group" aria-label="Billing period">
+      <button type="button" class="active" data-period="monthly">Monthly</button>
+      <button type="button" data-period="yearly">Yearly <span class="save-badge">Save 20%</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Explorer</h3>
+        <p style="color:var(--ink-dim);font-size:14px">For casual, curious learners</p>
+        <div class="price"><span class="amt" data-monthly="9" data-yearly="7">$9</span><span>/mo</span></div>
+        <ul>
+          <li>1 planet course at a time</li>
+          <li>Standard video quality</li>
+          <li>Community forum access</li>
+        </ul>
+        <a class="btn-ghost" href="#" style="display:flex">Start Explorer</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="badge">Most Popular</span>
+        <h3>Orbiter</h3>
+        <p style="color:var(--ink-dim);font-size:14px">Full access, one seat</p>
+        <div class="price"><span class="amt" data-monthly="19" data-yearly="15">$19</span><span>/mo</span></div>
+        <ul>
+          <li>All planet courses, unlimited</li>
+          <li>Cinematic 4K video</li>
+          <li>Certificates of completion</li>
+          <li>Priority forum support</li>
+        </ul>
+        <a class="btn-pill" href="#" style="display:flex">Start Orbiter</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Mission Crew</h3>
+        <p style="color:var(--ink-dim);font-size:14px">For classrooms &amp; families</p>
+        <div class="price"><span class="amt" data-monthly="49" data-yearly="39">$49</span><span>/mo</span></div>
+        <ul>
+          <li>Up to 5 learner seats</li>
+          <li>Everything in Orbiter</li>
+          <li>Progress dashboard for parents/teachers</li>
+        </ul>
+        <a class="btn-ghost" href="#" style="display:flex">Start Mission Crew</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow center">FAQ</div>
+    <h2 class="h-serif center" style="margin-bottom:44px">Questions, answered.</h2>
+    <div class="faq">
+      <details class="faq-item" open>
+        <summary>Can I switch plans later?</summary>
+        <p>Yes — upgrade or downgrade anytime from your account settings. Changes apply at your next billing cycle.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is there a free trial?</summary>
+        <p>Every plan starts with a 7-day free trial, no card charged until it ends.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you offer student discounts?</summary>
+        <p>Yes — verified students get 30% off any plan. Look for the discount code at checkout.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What happens when a new planet launches?</summary>
+        <p>Orbiter and Mission Crew members get instant access. Explorer members can add it à la carte.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:14px;display:inline-block">space<i>edu</i></a>
+        <p style="color:var(--ink-dim);font-size:14px;max-width:280px;margin-top:10px">Cinematic astronomy courses for curious minds, taught planet by planet.</p>
+      </div>
+      <div><h4>Explore</h4><a href="index.html">Planets</a><a href="tutorials.html">Tutorials</a><a href="blog.html">Blog</a></div>
+      <div><h4>Learn</h4><a href="tuition.html">Tuition &amp; Plans</a><a href="#plans">Enroll</a></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Contact</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 SpaceEdu. All rights reserved.</span><span>Made for curious minds, everywhere.</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.toggle-row button');
+  var amounts=document.querySelectorAll('.amt');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.classList.remove('active')});
+      this.classList.add('active');
+      var period=this.dataset.period;
+      amounts.forEach(function(a){ a.textContent = '$'+a.dataset[period]; });
+    });
+  });
+})();
+</script>
+</body>
+</html>

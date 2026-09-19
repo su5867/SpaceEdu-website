@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tutorials — SpaceEdu</title>
+<link rel="icon" type="image/png" href="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202005_3346cc4d-ec3b-44ab-825c-b18e49f5021a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Hanken+Grotesk:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero{padding:120px 0 44px;text-align:center;background:radial-gradient(ellipse at top,rgba(121,220,232,.08),transparent 60%)}
+.filter-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.tut-thumb{height:170px;border-radius:12px;background-size:cover;background-position:center;position:relative;margin-bottom:16px}
+.tut-thumb .dur{position:absolute;bottom:10px;right:10px;background:rgba(4,16,31,.75);backdrop-filter:blur(4px);
+  padding:4px 10px;border-radius:8px;font-size:12px;font-weight:600}
+.tut-tag{font-size:12px;color:var(--cyan);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.tut-title{font-family:var(--font-serif);font-size:20px;margin:8px 0;font-weight:400}
+.tut-meta{color:var(--ink-dim);font-size:13px}
+.tut-card{cursor:pointer}
+.hide{display:none !important}
+.empty-msg{text-align:center;color:var(--ink-dim);padding:60px 0;display:none}
+.empty-msg.show{display:block}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navrow">
+    <a class="logo" href="index.html">space<i>edu</i></a>
+    <nav class="links" id="site-nav">
+      <a href="index.html">Planets</a>
+      <a href="tuition.html">Tution</a>
+      <a href="tutorials.html" aria-current="page">Tutorials</a>
+      <a href="blog.html">Blog</a>
+      <a class="enroll" href="tuition.html">Enroll</a>
+    </nav>
+    <button class="burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow center">Tutorials</div>
+    <h1 class="h-serif center" style="max-width:700px">Bite-size lessons for every planet.</h1>
+    <p class="lede center" style="margin-top:8px">Filter by world and jump straight into the lesson that interests you most.</p>
+    <div class="filter-row" role="group" aria-label="Filter tutorials by planet">
+      <button type="button" class="tag active" data-filter="all">All</button>
+      <button type="button" class="tag" data-filter="earth">Earth</button>
+      <button type="button" class="tag" data-filter="venus">Venus</button>
+      <button type="button" class="tag" data-filter="mars">Mars</button>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="grid grid-3" id="tut-grid">
+
+      <div class="card tut-card reveal" data-planet="earth">
+        <div class="tut-thumb" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202133_508c64b8-a31e-4290-bdfc-1187df70e0a6.png')"><span class="dur">12 min</span></div>
+        <div class="tut-tag">Earth</div>
+        <div class="tut-title">How Plate Tectonics Shaped Earth</div>
+        <div class="tut-meta">Beginner · Geology</div>
+      </div>
+
+      <div class="card tut-card reveal" data-planet="earth">
+        <div class="tut-thumb" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202133_508c64b8-a31e-4290-bdfc-1187df70e0a6.png')"><span class="dur">18 min</span></div>
+        <div class="tut-tag">Earth</div>
+        <div class="tut-title">The Water Cycle, Start to Finish</div>
+        <div class="tut-meta">Beginner · Climate</div>
+      </div>
+
+      <div class="card tut-card reveal" data-planet="venus">
+        <div class="tut-thumb" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202133_cf55d1d8-7b59-4a64-80da-d72052ae974e.png')"><span class="dur">15 min</span></div>
+        <div class="tut-tag">Venus</div>
+        <div class="tut-title">Why Venus Spins Backwards</div>
+        <div class="tut-meta">Intermediate · Orbital Mechanics</div>
+      </div>
+
+      <div class="card tut-card reveal" data-planet="venus">
+        <div class="tut-thumb" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202133_cf55d1d8-7b59-4a64-80da-d72052ae974e.png')"><span class="dur">10 min</span></div>
+        <div class="tut-tag">Venus</div>
+        <div class="tut-title">Inside the Runaway Greenhouse</div>
+        <div class="tut-meta">Intermediate · Atmosphere</div>
+      </div>
+
+      <div class="card tut-card reveal" data-planet="mars">
+        <div class="tut-thumb" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202133_0ba6de7c-285d-43dc-b7ab-8c54c73707cb.png')"><span class="dur">20 min</span></div>
+        <div class="tut-tag">Mars</div>
+        <div class="tut-title">Olympus Mons: The Tallest Volcano</div>
+        <div class="tut-meta">Beginner · Geology</div>
+      </div>
+
+      <div class="card tut-card reveal" data-planet="mars">
+        <div class="tut-thumb" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202133_0ba6de7c-285d-43dc-b7ab-8c54c73707cb.png')"><span class="dur">22 min</span></div>
+        <div class="tut-tag">Mars</div>
+        <div class="tut-title">Could Humans Actually Live on Mars?</div>
+        <div class="tut-meta">Advanced · Colonization</div>
+      </div>
+
+    </div>
+    <div class="empty-msg" id="empty-msg">No tutorials match that filter yet — check back soon.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:14px;display:inline-block">space<i>edu</i></a>
+        <p style="color:var(--ink-dim);font-size:14px;max-width:280px;margin-top:10px">Cinematic astronomy courses for curious minds, taught planet by planet.</p>
+      </div>
+      <div><h4>Explore</h4><a href="index.html">Planets</a><a href="tutorials.html">Tutorials</a><a href="blog.html">Blog</a></div>
+      <div><h4>Learn</h4><a href="tuition.html">Tuition &amp; Plans</a><a href="tuition.html">Enroll</a></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Contact</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 SpaceEdu. All rights reserved.</span><span>Made for curious minds, everywhere.</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+(function(){
+  var tags=document.querySelectorAll('.filter-row .tag');
+  var cards=document.querySelectorAll('.tut-card');
+  var empty=document.getElementById('empty-msg');
+  tags.forEach(function(t){
+    t.addEventListener('click',function(){
+      tags.forEach(function(x){x.classList.remove('active')});
+      this.classList.add('active');
+      var f=this.dataset.filter;
+      var visible=0;
+      cards.forEach(function(c){
+        var show = f==='all' || c.dataset.planet===f;
+        c.classList.toggle('hide', !show);
+        if(show) visible++;
+      });
+      empty.classList.toggle('show', visible===0);
+    });
+  });
+})();
+</script>
+</body>
+</html>
